@@ -1,20 +1,21 @@
 # Kindle Dashboard
 
-![Screenshot](assets/screenshot.png)
-
 A dashboard that displays your local live rail departures, the weather forecast, and some other useful information. Designed to display nicely on a jailbroken kindle.
 
+![Screenshot](assets/screenshot.png)
+
 # Prerequisites
-So many prerequisites...
 
 ## Kindle
-Your Kindle needs to be jailbroken. Instructions are [here](https://wiki.mobileread.com/wiki/Kindle_Hacks_Information#Jail_break_JB)
-Once you're jailbroken, copy the kindle-files folder to /mnt/us/ on your Kindle, and add the following line to /etc/crontab/root:
+Your Kindle needs to be jailbroken. Instructions are [here](https://wiki.mobileread.com/wiki/Kindle_Hacks_Information#Jail_break_JB).
+Once you're jailbroken, copy the kindle-files folder to /mnt/us/ on your Kindle, rename it to 'dashboard' and add the following lines to /etc/crontab/root:
 
     '* * * * * /mnt/us/dashboard/display-weather.sh >>/mnt/us/dashboard/log.txt 2>>/mnt/us/dashboard/log.txt
+
     @reboot /mnt/us/dashboard/init-weather.sh'
 
 Then run
+    
     'etc/init.d/crontab restart'
 and your kindle should download and display the latest dashboard once a minute.
 
