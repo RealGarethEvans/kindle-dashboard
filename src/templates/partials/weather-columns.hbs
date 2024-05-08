@@ -1,0 +1,16 @@
+<g id="weather-columns" font-size="38px" font-weight="bold">
+  {{#each weather_columns}}
+    <text font-size="{{TITLE_FONT_SIZE}}" style="text-anchor:middle;" y="{{TIME_Y_COORD}}" x="{{COLUMN_CENTRE_NUDGED}}" >{{TIME}}</text>
+    <svg  x="{{COLUMN_LEFT}}" y="{{TYPE_Y_COORD}}" width="{{TYPE_WIDTH}}" height="200">
+      <use xlink:href='#{{WEATHER_TYPE}}' x="9" y="0" transform="scale(1.25)"></use>
+    </svg>
+    <text font-size="50px" style="text-anchor:middle;" y="{{TEMP_Y_COORD}}" x="{{COLUMN_CENTRE_NUDGED}}" >{{TEMPERATURE_1}}</text>
+    <text font-size="30px" style="text-anchor:middle;" y="{{FEELS_LIKE_Y_COORD}}" x="{{COLUMN_CENTRE_NUDGED}}" >({{TEMPERATURE_2}})</text>
+    <g class="wind-direction">
+      <!-- Wind: {{WIND_DIR}} -->
+      <circle cx="{{COLUMN_CENTRE_NUDGED}}" cy="{{WIND_Y_COORD}}" r="{{WIND_RADIUS}}" fill="black" />
+      <line x1="{{COLUMN_CENTRE_NUDGED}}" y1="{{WIND_Y_COORD}}" x2="{{ARROW_X_COORD}}" y2="{{ARROW_Y_COORD}}" marker-end="url(#triangle)" stroke-width="{{ARROW_STROKE_WIDTH}}"/>
+    </g>
+    <text font-size="{{WIND_SPEED_SIZE}}px" style="text-anchor:middle;" y="{{WIND_SPEED_Y_COORD}}" x="{{COLUMN_CENTRE_NUDGED}}" fill="white">{{WIND_SPEED}}</text>
+  {{/each}}
+</g>

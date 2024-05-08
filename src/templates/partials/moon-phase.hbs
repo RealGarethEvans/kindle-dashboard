@@ -1,0 +1,10 @@
+  <g id="moon">
+    <path
+      id="moon_phase"
+      fill="{{MOON_INVISIBLE_COLOUR}}"
+      d="M{{MOON_X_COORD}}, {{MOON_TOP}}
+         A{{MOON_RADIUS}}, {{MOON_RADIUS}} 0 1,{{IS_WANING}} {{MOON_X_COORD}}, {{MOON_BOTTOM}}
+         A{{PHASE_RADIUS}}, {{MOON_RADIUS}} 0 1,{{PHASE_SWEEP}} {{MOON_X_COORD}}, {{MOON_TOP}}"
+         />
+    <circle id="moon-outline" cx="{{MOON_X_COORD}}" cy="{{MOON_Y_COORD}}" r="{{MOON_RADIUS}}" style="stroke:{{MOON_INVISIBLE_COLOUR}}; fill:none" />
+  </g>

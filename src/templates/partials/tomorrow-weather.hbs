@@ -1,0 +1,7 @@
+  <g id="tomorrow-weather" font-size="40px" font-weight="bold">
+    <text font-size="{{TOMORROW_TITLE_FONT_SIZE}}" style="text-anchor:left;" y="{{TOMORROW_TIME_Y_COORD}}" x="{{TOMORROW_COLUMN_LEFT}}" >{{TOMORROW_TIME}}:</text>
+    <svg  x="{{TOMORROW_TYPE_X_COORD}}" y="{{TOMORROW_TYPE_Y_COORD}}" width="{{TOMORROW_TYPE_WIDTH}}" height="200">
+      <use xlink:href="#{{TOMORROW_WEATHER_TYPE}}"  transform="scale({{TOMORROW_TYPE_SCALE}})"></use>
+    </svg>
+    <text font-size="{{TOMORROW_TEMP_FONT_SIZE}}" style="text-anchor:left;" y="{{TOMORROW_TEMP_Y_COORD}}" x="{{TOMORROW_TEMP_X_COORD}}" >{{TOMORROW_TEMPERATURE}}°</text>
+  </g>

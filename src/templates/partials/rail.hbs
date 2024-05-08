@@ -1,0 +1,13 @@
+<g id="trains" font-size="{{TRAIN_FONT_SIZE}}">
+    <text style="text-anchor:middle;" x="{{TRAIN_TITLE_X}}" y="{{TRAIN_TITLE_Y}}" font-size="{{TITLE_FONT_SIZE}}" font-weight="bold">{{TRAINS_TITLE}}</text>
+    <text style="text-anchor:start;" x="{{FIRST_STATION_X}}" y="{{TRAIN_TITLE_Y}}" font-size="{{TITLE_FONT_SIZE}}" font-weight="bold">{{STATION_1}}</text>
+    <text style="text-anchor:end;" x="{{SECOND_STATION_X}}" y="{{TRAIN_TITLE_Y}}" font-size="{{TITLE_FONT_SIZE}}" font-weight="normal">{{STATION_2}}</text>
+    {{#each trains}}
+        <g class="train-row" font-weight="{{FONT_WEIGHT}}">
+        <text x="{{SCHED_X_COORD}}" y="{{Y_COORD}}" >{{SCHEDULED}}</text>
+        <text x="{{DEST_X_COORD}}" y="{{Y_COORD}}" >{{DESTINATION}}</text>
+        <rect id="due-time-background" fill="white" x="{{BOX_X_COORD}}" y="{{BOX_Y_COORD}}" width="{{BOX_WIDTH}}" height="{{BOX_HEIGHT}}" />
+        <text style="text-anchor: end" x="{{DUE_X_COORD}}" y="{{Y_COORD}}" >{{DUE}}</text>
+        </g>
+  {{/each}}
+</g>

@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  dashboard:
+    image: kindle-dashboard
+    volumes:
+      - ./:/app
+    ports:
+        - 3000:3000
+    environment:
+        - VIRTUAL_HOST= <put your virtual host name here if you're using nginx-proxy>
+        - TZ=Europe/London
+    stdin_open: true
+    restart: always
+
+networks:
+    default:
+        external:
+            name: nginx-proxy
+

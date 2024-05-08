@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  height="{{HEIGHT}}px"
+  width="{{WIDTH}}px"
+  font-family="Noto Sans"
+  >
+  filter="url(#grayscale)"
+
+  {{> defs}}
+  
+  <marker xmlns="http://www.w3.org/2000/svg" id="triangle" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="strokeWidth" markerWidth="4" markerHeight="3" orient="auto">
+    <path d="M 0 0 L 5 5 L 0 10 z"/>
+  </marker>
+  <filter id="grayscale">
+   <feColorMatrix type="matrix" values="-1.3333 -1.3333 -1.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"/>
+  </filter>
+
+  <rect height="100%" width="100%" fill="white" />
+  <!--<rect x="0" y="0" width="600" height="800" fill-opacity="0" stroke="blue" stroke-width="5" /> Just for testing -->
+{{> weather_columns}}
+{{> tomorrow_weather}}
+{{> moon_phase}}
+{{> sunrise}}
+{{> rail}}
+{{> email}}
+<text font-size="15px" style="text-anchor:start;" x="{{STATUS_X}}" y="{{STATUS_Y}}">{{STATUS}}</text>
+</svg>
